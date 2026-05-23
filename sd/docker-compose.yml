@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   servidor:
     build:
@@ -25,6 +23,7 @@ services:
       - NOMBRE=Cliente1
     stdin_open: true
     tty: true
+    profiles: ["clientes"]
 
   cliente2:
     build:
@@ -39,6 +38,7 @@ services:
       - NOMBRE=Cliente2
     stdin_open: true
     tty: true
+    profiles: ["clientes"]
 
   cliente3:
     build:
@@ -53,6 +53,7 @@ services:
       - NOMBRE=Cliente3
     stdin_open: true
     tty: true
+    profiles: ["clientes"]
 
 networks:
   red-sd:

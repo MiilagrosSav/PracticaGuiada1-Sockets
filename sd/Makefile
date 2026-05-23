@@ -24,3 +24,14 @@ docker-up:
 
 docker-down:
 	docker-compose down
+	docker-cliente1:
+	docker compose run --rm -it cliente1
+
+docker-cliente2:
+	docker compose run --rm -it cliente2
+
+docker-cliente3:
+	docker compose run --rm -it cliente3
+
+docker-logs:
+	docker compose logs -f servidor
